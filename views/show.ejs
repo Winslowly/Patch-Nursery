@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>hi</title>
+</head>
+<body>
+    <div class="cards" display="d-flex flex-row">
+        <div class="card border-dark bg-light mb-3 text-center"  style="width: 700px;">
+        <h1 class="card-title"><%= trees.name %></h1>                                    
+                                    <a href="/<%= trees._id %>/edit/" class="btn btn-primary">Edit</a>
+                                    <!-- <a href="#" class="btn btn-primary">Delete</a> -->
+                                    <a href="/" class="btn btn-primary">Home</a>
+                                    <img class="card-img-top" src= "<%= trees.img %>"  alt="<%= trees.name %>">
+                                    <p class="card-text">Scientific name: <%= trees.scientific_name %></p>
+                                    <p class="card-text">Class: <%= trees.class %></p>
+                                    <p class="card-text">Family:  <%= trees.family %></p>
+        </div>
+    </div>
+</body>
+</html>

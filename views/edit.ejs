@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Edit Entry</title>
+</head>
+
+<body>
+    <div class="cards" display="d-flex flex-row">
+        <div class="card border-dark bg-light mb-3 text-center"  style="width: 700px;">
+            <h1>Edit Tree: <%= trees.name %></h1>
+            <a href="/" class="btn btn-primary">Home</a>
+            <a href="/show/<%= trees._id %>" class="btn btn-primary"><%= trees.name %></a>
+            <form action="/<%= trees._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <label for="">Common Name:</label>
+                    <textarea class="form-control" id="" rows="1" placeholder=""><%= trees.name %></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="">Scientific Name: </label>
+                    <textarea class="form-control" id="" rows="1" placeholder=""><%= trees.scientific_name %></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="">Image URL: </label>
+                    <textarea class="form-control" id="" rows="1" placeholder=""><%= trees.img %></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="">Class Name:</label>
+                    <textarea class="form-control" id="" rows="1" placeholder=""><%= trees.class %></textarea>
+                </div>        
+                <div class="form-group">
+                    <label for="">Family: </label>
+                    <textarea class="form-control" id="" rows="1" placeholder=""><%= trees.family %></textarea>
+                </div>
+
+            </form>
+                <input type="submit" value="Update <%= trees.name %>">
+            <form action="/<%=trees.id%>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete <%= trees.name %>">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
